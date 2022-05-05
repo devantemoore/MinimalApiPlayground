@@ -158,7 +158,7 @@ app.MapGet("/paged", (PagingData paging) =>
     $"ToString: {paging}\r\nToQueryString: {paging.ToQueryString()}")
     .WithTags("Examples");
 
-// Example of a wrapper generic type the can bind its generic argument
+// Example of a wrapper generic type that can bind its generic argument
 app.MapGet("/wrapped/{id}", (Wrapped<int> id) =>
     $"Successfully parsed {id.Value} as Wrapped<int>!")
     .WithTags("Examples");
